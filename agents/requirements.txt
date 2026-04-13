@@ -1,0 +1,29 @@
+# Agent Suite Dependencies
+# Separate from backend/requirements.txt — install with:
+#   pip install -r agents/requirements.txt
+
+# LLM Providers
+groq>=0.9.0
+google-generativeai>=0.8.0
+
+# Data validation
+pydantic>=2.0
+pydantic-settings>=2.0
+
+# Async HTTP
+aiohttp>=3.9.0
+aiofiles>=23.0
+
+# Configuration
+pyyaml>=6.0
+python-dotenv>=1.0
+
+# CLI
+typer>=0.12.0
+rich>=13.0
+
+# PDF Generation (optional — falls back to HTML-only)
+# weasyprint>=62.0
+
+# Retry logic
+tenacity>=8.0
