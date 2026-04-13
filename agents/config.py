@@ -44,7 +44,7 @@ GEMINI_MAX_TOKENS = 4096   # max output tokens per Gemini call
 
 # ── Scanner Config ───────────────────────────────────────────────────
 SCAN_CONCURRENCY = 10       # parallel HTTP fetches for portal scanning
-SCAN_FETCH_TIMEOUT = 10     # seconds per HTTP request
+SCAN_FETCH_TIMEOUT = 30     # seconds per HTTP request (Lever APIs are slow)
 SCAN_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"

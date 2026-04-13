@@ -17,9 +17,14 @@ export async function fetchJobs(filters: Filters, page = 1, limit = 30): Promise
   params.set('page', String(page));
   params.set('limit', String(limit));
 
-  const res = await fetch(`${BASE}/jobs?${params.toString()}`);
-  if (!res.ok) throw new Error(`API error: ${res.status}`);
-  return res.json();
+  try {
+    const res = await fetch(`${BASE}/jobs?${params.toString()}`);
+    if (!res.ok) throw new Error(`API error: ${res.status}`);
+    return res.json();
+  } catch {
+    // Backend unreachable — return empty results to prevent retry storms
+    return { jobs: [], total: 0, page, limit, has_more: false };
+  }
 }
 
 export async function generateColdDM(jobId: string, candidateProfile?: string): Promise<ColdMessageResponse> {

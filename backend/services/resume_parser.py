@@ -80,6 +80,22 @@ def extract_skills(text: str) -> list[str]:
 def extract_experience_level(text: str) -> str:
     """Infer experience level from resume text."""
     text_lower = text.lower()
+
+    # Check for fresher/new grad signals FIRST (higher priority)
+    fresher_signals = [
+        "fresher", "fresh graduate", "new grad", "new graduate", "recent graduate",
+        "entry level", "entry-level", "intern", "internship", "campus placement",
+        "b.tech", "btech", "b.e.", "b.sc", "bsc", "bachelor", "undergraduate",
+        "freshman", "sophomore", "final year", "penultimate year",
+        "college project", "university project", "academic project",
+        "0 years", "no experience", "seeking first", "aspiring",
+        "looking for my first", "career start", "just graduated",
+    ]
+    for s in fresher_signals:
+        if s in text_lower:
+            return "New Grad"
+
+    # Extract years of experience
     year_matches = re.findall(r'(\d+)\+?\s*years?\s*(?:of\s+)?(?:experience|exp)', text_lower)
     if year_matches:
         max_years = max(int(y) for y in year_matches)
@@ -90,17 +106,20 @@ def extract_experience_level(text: str) -> str:
         else:
             return "New Grad"
 
-    senior_signals = ["senior", "lead", "principal", "staff", "architect", "director", "manager"]
-    for s in senior_signals:
+    # Check for senior signals — require context (e.g., "senior engineer" not just "senior" alone)
+    senior_title_signals = [
+        "senior software", "senior engineer", "senior developer", "senior data",
+        "lead engineer", "lead developer", "tech lead", "principal engineer",
+        "staff engineer", "architect", "engineering director", "vp of engineering",
+        "head of engineering", "cto",
+    ]
+    for s in senior_title_signals:
         if s in text_lower:
             return "Senior"
 
-    junior_signals = ["intern", "freshman", "sophomore", "junior", "entry level", "new grad", "graduate"]
-    for s in junior_signals:
-        if s in text_lower:
-            return "New Grad"
-
-    return "Mid"
+    # Default: if no clear signals found, assume new grad / fresher
+    # (most resumes uploaded by experienced professionals will mention years of experience)
+    return "New Grad"
 
 
 def extract_role_preferences(text: str) -> list[str]:

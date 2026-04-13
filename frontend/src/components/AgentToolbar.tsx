@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react';
 import { fetchAgentHealth } from '../api/agentApi';
 import type { AgentHealthResponse } from '../types/agentTypes';
-import ScanPanel from './agents/ScanPanel';
-import ScorePanel from './agents/ScorePanel';
-import TailorPanel from './agents/TailorPanel';
-import BatchPanel from './agents/BatchPanel';
-import TrackerPanel from './agents/TrackerPanel';
 import '../agents.css';
 
-type AgentTab = 'scan' | 'score' | 'tailor' | 'batch' | 'tracker' | null;
+export type AgentTab = 'scan' | 'score' | 'tailor' | 'batch' | 'tracker';
 
 const TABS: { key: AgentTab; icon: string; label: string; color: string }[] = [
   { key: 'scan', icon: '🔍', label: 'Scan', color: '#06b6d4' },
@@ -18,8 +13,12 @@ const TABS: { key: AgentTab; icon: string; label: string; color: string }[] = [
   { key: 'tracker', icon: '📋', label: 'Tracker', color: '#3b82f6' },
 ];
 
-export default function AgentToolbar() {
-  const [activeTab, setActiveTab] = useState<AgentTab>(null);
+interface AgentToolbarProps {
+  onTabChange?: (tab: AgentTab) => void;
+  activeTab?: AgentTab | null;
+}
+
+export default function AgentToolbar({ onTabChange, activeTab: controlledTab }: AgentToolbarProps) {
   const [health, setHealth] = useState<AgentHealthResponse | null>(null);
 
   useEffect(() => {
@@ -28,8 +27,10 @@ export default function AgentToolbar() {
       .catch(() => setHealth({ status: 'error', warnings: ['Backend unreachable'], cv_loaded: false, data_dir: '' }));
   }, []);
 
-  const toggle = (tab: AgentTab) => {
-    setActiveTab(prev => prev === tab ? null : tab);
+  const handleClick = (tab: AgentTab) => {
+    if (onTabChange) {
+      onTabChange(tab);
+    }
   };
 
   return (
@@ -62,8 +63,8 @@ export default function AgentToolbar() {
           {TABS.map(tab => (
             <button
               key={tab.key}
-              className={`agent-toolbar-tab ${activeTab === tab.key ? 'agent-tab-active-inline' : ''}`}
-              onClick={() => toggle(tab.key)}
+              className={`agent-toolbar-tab ${controlledTab === tab.key ? 'agent-tab-active-inline' : ''}`}
+              onClick={() => handleClick(tab.key)}
               style={{
                 '--tab-color': tab.color,
               } as React.CSSProperties}
@@ -75,34 +76,6 @@ export default function AgentToolbar() {
           ))}
         </div>
       </div>
-
-      {/* Expanded Panel (slides down when a tab is active) */}
-      {activeTab && (
-        <div className="agent-panel-expand" key={activeTab}>
-          <div className="agent-panel-inner">
-            <div className="agent-panel-header">
-              <h3 className="agent-panel-title">
-                {TABS.find(t => t.key === activeTab)?.icon}{' '}
-                {TABS.find(t => t.key === activeTab)?.label} Agent
-              </h3>
-              <button
-                className="agent-panel-close"
-                onClick={() => setActiveTab(null)}
-                title="Close panel"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="agent-panel-body">
-              {activeTab === 'scan' && <ScanPanel />}
-              {activeTab === 'score' && <ScorePanel />}
-              {activeTab === 'tailor' && <TailorPanel />}
-              {activeTab === 'batch' && <BatchPanel />}
-              {activeTab === 'tracker' && <TrackerPanel />}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
