@@ -3,7 +3,6 @@
 A full-stack platform that aggregates startup job listings from multiple sources (YC, VC portfolios, job boards) and provides AI-powered features like resume matching and cold email generation.
 
 ## Tech Stack
-
 | Layer | Technology |
 |-------|-----------|
 | **Frontend** | React 18 + TypeScript, Vite, Framer Motion |
