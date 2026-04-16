@@ -1,12 +1,100 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Job } from '../types';
+import { Job, Founder } from '../types';
 import { generateColdDM } from '../api';
 
 interface JobCardProps {
   job: Job;
   index: number;
 }
+
+/* ── Helpers ───────────────────────────────────────────── */
+
+/** Detect role domain from title + category for the spec box */
+function detectRoleDomains(title: string, category?: string | null): string[] {
+  const blob = `${title} ${category || ''}`.toLowerCase();
+  const domains: string[] = [];
+
+  if (/\bfront[-\s]?end\b|react|angular|vue|ui\b|ux\b|css|web dev/i.test(blob)) domains.push('Frontend');
+  if (/\bback[-\s]?end\b|server|api|node|django|flask|rails|spring|go\b|rust\b/i.test(blob)) domains.push('Backend');
+  if (/\bfull[-\s]?stack\b/i.test(blob)) domains.push('Full-Stack');
+  if (/\b(machine learning|ml\b|deep learning|nlp|computer vision|ai\b|artificial intelligence|generative)/i.test(blob)) domains.push('ML / AI');
+  if (/\bdata\b.*\b(engineer|scientist|analy)/i.test(blob) || /\bdata science\b/i.test(blob)) domains.push('Data');
+  if (/\bdevops\b|sre\b|infra|platform|cloud|kubernetes|docker/i.test(blob)) domains.push('DevOps / Infra');
+  if (/\bmobile\b|android|ios|flutter|react native|swift|kotlin/i.test(blob)) domains.push('Mobile');
+  if (/\bsecurity\b|cyber|pentest|appsec/i.test(blob)) domains.push('Security');
+  if (/\bdesign\b|product design|graphic/i.test(blob)) domains.push('Design');
+  if (/\bproduct\b.*\bmanag/i.test(blob) || /\bpm\b/i.test(blob)) domains.push('Product');
+  if (/\bqa\b|quality|test|sdet/i.test(blob)) domains.push('QA / Testing');
+  if (/\bblockchain\b|web3|smart contract|solidity/i.test(blob)) domains.push('Blockchain');
+
+  if (domains.length === 0) {
+    if (/engineer|developer|software/i.test(blob)) domains.push('Software Engineering');
+    else domains.push('General');
+  }
+  return domains;
+}
+
+/** Map experience_level to a user-friendly label */
+function formatExperience(level?: string | null): string {
+  if (!level) return 'Not specified';
+  const l = level.toLowerCase();
+  if (l.includes('intern') || l.includes('fresher')) return 'Intern / Fresher';
+  if (l.includes('new grad') || l.includes('entry') || l.includes('junior')) return '0-2 yrs (Entry)';
+  if (l.includes('mid')) return '2-5 yrs (Mid)';
+  if (l.includes('senior')) return '5-8 yrs (Senior)';
+  if (l.includes('staff')) return '8-12 yrs (Staff)';
+  if (l.includes('principal') || l.includes('lead') || l.includes('director') || l.includes('head') || l.includes('vp')) return '10+ yrs (Lead+)';
+  return level;
+}
+
+/** Check if a founder entry is a real person vs placeholder junk */
+function isRealFounder(f: Founder): boolean {
+  const nameLower = (f.name || '').toLowerCase().trim();
+  const titleLower = (f.title || '').toLowerCase().trim();
+
+  // Skip empty names
+  if (!nameLower || nameLower.length < 2) return false;
+
+  // Known placeholder patterns
+  const placeholderNames = [
+    'who we are', 'make something', 'our motto', 'our mission',
+    'our vision', 'team member', 'unknown', 'n/a', 'the team',
+    'company', 'about us', 'join us', 'open role', 'components',
+    'ai', 'hiring', 'careers', 'people want', 'we are',
+  ];
+  if (placeholderNames.some(p => nameLower === p || nameLower.includes(p))) return false;
+
+  // Skip very short single-word entries (e.g. "AI", "QA") — real names are 2+ words
+  const words = nameLower.split(/\s+/).filter(w => w.length > 0);
+  if (words.length < 2) return false;
+
+  // If title is "Team Member" and the name doesn't look like a real 2+ word name, skip
+  if (titleLower === 'team member') {
+    // Real names typically start with a capital letter
+    if (!/^[A-Z]/.test(f.name.trim())) return false;
+  }
+
+  return true;
+}
+
+/* ── Domain color palette ──────────────────────────────── */
+const domainColors: Record<string, { bg: string; text: string }> = {
+  'Frontend':            { bg: '#1e3a5f', text: '#7dd3fc' },
+  'Backend':             { bg: '#1a3328', text: '#6ee7b7' },
+  'Full-Stack':          { bg: '#312e81', text: '#c4b5fd' },
+  'ML / AI':             { bg: '#4a1d6a', text: '#e9d5ff' },
+  'Data':                { bg: '#3b1f1f', text: '#fca5a5' },
+  'DevOps / Infra':      { bg: '#1f2937', text: '#93c5fd' },
+  'Mobile':              { bg: '#422006', text: '#fdba74' },
+  'Security':            { bg: '#1c1917', text: '#fbbf24' },
+  'Design':              { bg: '#831843', text: '#f9a8d4' },
+  'Product':             { bg: '#164e63', text: '#67e8f9' },
+  'QA / Testing':        { bg: '#1e293b', text: '#94a3b8' },
+  'Blockchain':          { bg: '#1a1a2e', text: '#a78bfa' },
+  'Software Engineering':{ bg: '#1e293b', text: '#60a5fa' },
+  'General':             { bg: '#1f2937', text: '#9ca3af' },
+};
 
 export default function JobCard({ job, index }: JobCardProps) {
   const [expanded, setExpanded] = useState(false);
@@ -28,6 +116,18 @@ export default function JobCard({ job, index }: JobCardProps) {
       setLoadingDM(false);
     }
   };
+
+  const roleDomains = detectRoleDomains(job.role_title, job.role_category);
+  const experienceLabel = formatExperience(job.experience_level);
+
+  // Filter junk founders, then deduplicate by name (keep first occurrence)
+  const realFounders = job.founders.filter(isRealFounder).reduce<Founder[]>((acc, f) => {
+    const nameKey = f.name.trim().toLowerCase();
+    if (!acc.some(existing => existing.name.trim().toLowerCase() === nameKey)) {
+      acc.push(f);
+    }
+    return acc;
+  }, []);
 
   return (
     <motion.div
@@ -144,25 +244,110 @@ export default function JobCard({ job, index }: JobCardProps) {
         </div>
       )}
 
-      {/* Job Specification Preview — always visible */}
-      {(job.jd_summary || job.job_description) && (
-        <div className="mb-3" style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.75rem' }}>
-          <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: 'var(--color-muted)' }}>
-            Job Specification
-          </p>
-          <p className="text-sm leading-relaxed job-spec-preview" style={{ color: 'var(--color-muted)' }}>
+      {/* ═══ Enhanced Job Specification Box ═══ */}
+      <div className="job-spec-box mb-3" style={{
+        borderTop: '1px solid var(--color-border)',
+        paddingTop: '0.75rem',
+      }}>
+        <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--color-muted)' }}>
+          Job Specification
+        </p>
+
+        {/* Role domain tags */}
+        <div className="flex flex-wrap gap-1 mb-2">
+          {roleDomains.map((domain, i) => {
+            const colors = domainColors[domain] || domainColors['General'];
+            return (
+              <span
+                key={i}
+                className="badge"
+                style={{
+                  backgroundColor: colors.bg,
+                  color: colors.text,
+                  fontSize: '0.7rem',
+                  padding: '0.2rem 0.55rem',
+                  fontWeight: 600,
+                }}
+              >
+                {domain}
+              </span>
+            );
+          })}
+        </div>
+
+        {/* Compact info grid */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '0.35rem 0.75rem',
+          padding: '0.5rem 0.65rem',
+          borderRadius: '0.5rem',
+          backgroundColor: 'var(--color-surface)',
+          border: '1px solid var(--color-border)',
+        }}>
+          {/* Experience */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            <span style={{ fontSize: '0.65rem', color: 'var(--color-muted)' }}>📊</span>
+            <div>
+              <span style={{ fontSize: '0.6rem', color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Experience</span>
+              <p style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-text)', lineHeight: 1.2 }}>{experienceLabel}</p>
+            </div>
+          </div>
+
+          {/* Salary */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            <span style={{ fontSize: '0.65rem', color: 'var(--color-muted)' }}>💰</span>
+            <div>
+              <span style={{ fontSize: '0.6rem', color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Salary</span>
+              <p style={{ fontSize: '0.75rem', fontWeight: 600, color: job.salary_range ? '#10b981' : 'var(--color-muted)', lineHeight: 1.2 }}>
+                {job.salary_range || 'Not disclosed'}
+              </p>
+            </div>
+          </div>
+
+          {/* Sponsorship */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            <span style={{ fontSize: '0.65rem', color: 'var(--color-muted)' }}>🛂</span>
+            <div>
+              <span style={{ fontSize: '0.6rem', color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Visa Sponsor</span>
+              <p style={{
+                fontSize: '0.75rem',
+                fontWeight: 600,
+                color: job.visa_sponsorship === 'Yes' ? '#10b981' : job.visa_sponsorship === 'No' ? '#ef4444' : 'var(--color-muted)',
+                lineHeight: 1.2,
+              }}>
+                {job.visa_sponsorship || 'Unknown'}
+              </p>
+            </div>
+          </div>
+
+          {/* Work Type */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            <span style={{ fontSize: '0.65rem', color: 'var(--color-muted)' }}>🏢</span>
+            <div>
+              <span style={{ fontSize: '0.6rem', color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Work Type</span>
+              <p style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-text)', lineHeight: 1.2, textTransform: 'capitalize' }}>
+                {job.work_type || 'Not specified'}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* JD Summary text */}
+        {(job.jd_summary || job.job_description) && (
+          <p className="text-sm leading-relaxed job-spec-preview" style={{ color: 'var(--color-muted)', marginTop: '0.5rem' }}>
             {job.jd_summary || (job.job_description ? job.job_description.slice(0, 200) + '...' : '')}
           </p>
-        </div>
-      )}
+        )}
+      </div>
 
-      {/* Founders block — ALWAYS visible if founders exist */}
-      {job.founders.length > 0 && (
+      {/* Founders block — only show REAL founders */}
+      {realFounders.length > 0 && (
         <div className="mb-3" style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.75rem' }}>
           <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--color-muted)' }}>
             Founders
           </p>
-          {job.founders.map((founder, i) => (
+          {realFounders.map((founder, i) => (
             <div key={i} className="flex items-center justify-between py-1">
               <div className="flex items-center gap-2">
                 <span
@@ -181,7 +366,7 @@ export default function JobCard({ job, index }: JobCardProps) {
                   <p className="text-sm font-medium" style={{ color: 'var(--color-text)' }}>
                     {founder.name}
                   </p>
-                  {founder.title && (
+                  {founder.title && founder.title !== 'Team Member' && (
                     <p className="text-xs" style={{ color: 'var(--color-muted)' }}>
                       {founder.title}
                     </p>

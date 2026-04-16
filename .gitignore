@@ -16,8 +16,8 @@ env/
 .env.local
 .env.*.local
 
-# ── Data (runtime-generated) ───────────────────
-backend/data/jobs.json
+# ── Data ───────────────────────────────────────
+# backend/data/jobs.json is committed as seed data
 
 # ── Node.js ────────────────────────────────────
 node_modules/

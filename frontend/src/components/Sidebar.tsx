@@ -9,11 +9,11 @@ interface SidebarProps {
 }
 
 const ROLES = ['', 'AI/ML', 'Engineering', 'Frontend', 'Backend', 'DevOps', 'Mobile', 'Design', 'Data', 'GTM', 'Ops', 'Cybersecurity', 'Blockchain'];
-const LEVELS = ['', 'New Grad', 'Mid', 'Senior'];
+const LEVELS = ['', 'New Grad', 'Intern', 'Entry', 'Mid', 'Senior'];
 const VISA = ['', 'Yes', 'No', 'Unknown'];
 const COUNTRIES = ['', 'US', 'UK', 'India', 'Canada', 'EU', 'France', 'Germany', 'Netherlands', 'Australia', 'Remote'];
-const STAGES = ['', 'Seed', 'Series A', 'Series B', 'Series C', 'Series D', 'Growth'];
-const VCS = ['', 'YC', 'a16z', 'Sequoia', 'Pearl', 'Lightspeed', 'Bessemer', 'Founders Fund', 'Tiger Global', 'Accel', 'Insight Partners'];
+const STAGES = ['', 'Seed', 'Series A', 'Series B', 'Series C', 'Series D', 'Series E', 'Series F', 'Late Stage', 'Growth', 'Public'];
+const VCS = ['', 'YC', 'a16z', 'Sequoia', 'Pearl', 'Lightspeed', 'Bessemer', 'Founders Fund', 'Tiger Global', 'Accel', 'Insight Partners', 'SoftBank', 'Prosus', 'Temasek', 'Khosla Ventures', 'Warburg Pincus'];
 const BATCHES = ['', 'W25', 'S24', 'W24', 'S23'];
 const TEAM_SIZES = ['', '1-10', '10-50', '50-200', '200+'];
 
