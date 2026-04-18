@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { runTailor, importLinkedInProfile, importGitHubProfile } from '../../api/agentApi';
+import { runTailor } from '../../api/agentApi';
 import type { TailorResponse, AgentStatus } from '../../types/agentTypes';
 
 // ── Types ────────────────────────────────────────────────
@@ -88,9 +88,7 @@ export default function TailorPanel() {
   const [profile, setProfile] = useState<UserProfile>(loadProfile);
   const [skillInput, setSkillInput] = useState('');
 
-  // Auto-import state
-  const [importing, setImporting] = useState<'none' | 'linkedin' | 'github' | 'both'>('none');
-  const [importStatus, setImportStatus] = useState('');
+
 
   // JD step
   const [inputMode, setInputMode] = useState<'url' | 'text'>('url');
@@ -162,75 +160,7 @@ export default function TailorPanel() {
     updateProfile({ education: profile.education.filter((_, i) => i !== idx) });
   };
 
-  // ── Auto-Import from LinkedIn/GitHub ──────────────────
 
-  const handleAutoImport = async (source: 'linkedin' | 'github' | 'both') => {
-    setImporting(source);
-    setImportStatus('');
-
-    try {
-      if (source === 'linkedin' || source === 'both') {
-        const linkedinUrl = profile.linkedin.trim();
-        if (!linkedinUrl) {
-          setImportStatus('⚠️ Please enter your LinkedIn URL first');
-          setImporting('none');
-          return;
-        }
-        setImportStatus('🔄 Importing from LinkedIn...');
-        const data = await importLinkedInProfile(linkedinUrl);
-
-        // Merge profile data
-        const mergedSkills = [...new Set([...profile.skills, ...data.skills])];
-        updateProfile({
-          fullName: data.fullName || profile.fullName,
-          email: data.email || profile.email,
-          skills: mergedSkills,
-          experience: data.experience.length > 0
-            ? [...data.experience, ...profile.experience]
-            : profile.experience,
-          education: data.education.length > 0
-            ? [...data.education, ...profile.education]
-            : profile.education,
-        });
-        setImportStatus('✅ LinkedIn profile imported!');
-      }
-
-      if (source === 'github' || source === 'both') {
-        const githubUrl = profile.github.trim();
-        if (!githubUrl) {
-          setImportStatus(prev => prev + (prev ? '\n' : '') + '⚠️ Please enter your GitHub URL first');
-          setImporting('none');
-          return;
-        }
-        setImportStatus(prev => prev ? prev + '\n🔄 Importing from GitHub...' : '🔄 Importing from GitHub...');
-        const data = await importGitHubProfile(githubUrl);
-
-        // Merge skills and add project-based experience
-        const mergedSkills = [...new Set([...profile.skills, ...data.skills])];
-        const projectExperience: ExperienceEntry[] = data.projects.map(p => ({
-          company: 'Personal Project',
-          role: p.name,
-          duration: 'Self-directed',
-          description: `${p.description}\nTech stack: ${p.tech}`,
-        }));
-
-        updateProfile({
-          fullName: profile.fullName || data.fullName,
-          github: githubUrl,
-          skills: mergedSkills,
-          experience: [...profile.experience, ...projectExperience],
-        });
-        setImportStatus(prev => {
-          const base = prev.replace(/🔄 Importing from GitHub\.\.\./, '');
-          return (base ? base + '\n' : '') + `✅ GitHub imported! ${data.repos} repos, ${data.contributions} contributions`;
-        });
-      }
-    } catch (e: any) {
-      setImportStatus('❌ Import failed: ' + (e.message || 'Unknown error'));
-    } finally {
-      setImporting('none');
-    }
-  };
 
   // ── Generate ────────────────────────────────────────────
 
@@ -420,90 +350,9 @@ export default function TailorPanel() {
       {step === 'profile' && (
         <div className="tailor-profile-form">
 
-          {/* ── Auto-Import Banner ── */}
-          <div style={{
-            padding: '1rem 1.25rem',
-            borderRadius: '0.75rem',
-            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(6, 182, 212, 0.05))',
-            border: '1px solid rgba(99, 102, 241, 0.15)',
-            marginBottom: '0.5rem',
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
-              <span style={{ fontSize: '1.25rem' }}>🪄</span>
-              <div>
-                <h4 style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--ag-text)', margin: 0 }}>
-                  Auto-Import Profile
-                </h4>
-                <p style={{ fontSize: '0.6875rem', color: 'var(--ag-text-muted)', margin: 0 }}>
-                  Enter your URLs below, then click to auto-fill everything from LinkedIn &amp; GitHub
-                </p>
-              </div>
-            </div>
 
-            <div className="tailor-form-row" style={{ marginBottom: '0.75rem' }}>
-              <div className="tailor-form-group">
-                <label className="tailor-form-label">LinkedIn URL</label>
-                <input className="ag-input" type="url" placeholder="https://linkedin.com/in/username"
-                  value={profile.linkedin} onChange={e => updateProfile({ linkedin: e.target.value })} />
-              </div>
-              <div className="tailor-form-group">
-                <label className="tailor-form-label">GitHub URL</label>
-                <input className="ag-input" type="url" placeholder="https://github.com/username"
-                  value={profile.github} onChange={e => updateProfile({ github: e.target.value })} />
-              </div>
-            </div>
 
-            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-              <button
-                className="ag-btn ag-btn-primary"
-                onClick={() => handleAutoImport('both')}
-                disabled={importing !== 'none'}
-                style={{ fontSize: '0.8125rem', padding: '0.5rem 1rem' }}
-              >
-                {importing === 'both' ? '🔄 Importing...' : '🚀 Import from Both'}
-              </button>
-              <button
-                className="ag-btn ag-btn-secondary"
-                onClick={() => handleAutoImport('linkedin')}
-                disabled={importing !== 'none'}
-                style={{ fontSize: '0.75rem', padding: '0.5rem 0.75rem' }}
-              >
-                {importing === 'linkedin' ? '🔄...' : '💼 LinkedIn Only'}
-              </button>
-              <button
-                className="ag-btn ag-btn-secondary"
-                onClick={() => handleAutoImport('github')}
-                disabled={importing !== 'none'}
-                style={{ fontSize: '0.75rem', padding: '0.5rem 0.75rem' }}
-              >
-                {importing === 'github' ? '🔄...' : '🐙 GitHub Only'}
-              </button>
-            </div>
 
-            {importStatus && (
-              <div style={{
-                marginTop: '0.75rem',
-                padding: '0.5rem 0.75rem',
-                borderRadius: '0.375rem',
-                background: 'rgba(255,255,255,0.04)',
-                fontSize: '0.75rem',
-                color: importStatus.includes('✅') ? 'var(--ag-success)' : importStatus.includes('❌') ? 'var(--ag-error)' : 'var(--ag-text-muted)',
-                whiteSpace: 'pre-line',
-              }}>
-                {importStatus}
-              </div>
-            )}
-          </div>
-
-          {/* ── Or Fill Manually ── */}
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: '0.75rem', margin: '0.25rem 0',
-            fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--ag-text-muted)',
-          }}>
-            <span style={{ flex: 1, height: '1px', background: 'var(--ag-border)' }} />
-            OR FILL MANUALLY
-            <span style={{ flex: 1, height: '1px', background: 'var(--ag-border)' }} />
-          </div>
 
           <div className="tailor-form-row">
             <div className="tailor-form-group">

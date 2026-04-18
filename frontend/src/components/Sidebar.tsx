@@ -60,6 +60,41 @@ function SelectFilter({
   );
 }
 
+function ToggleFilter({
+  id,
+  label,
+  checked,
+  onChange,
+}: {
+  id: string;
+  label: string;
+  checked: boolean;
+  onChange: (v: boolean) => void;
+}) {
+  return (
+    <div className="mb-2 flex items-center justify-between px-1">
+      <label htmlFor={id} className="text-xs font-medium cursor-pointer" style={{ color: 'var(--color-text)' }}>
+        {label}
+      </label>
+      <button
+        id={id}
+        role="switch"
+        aria-checked={checked}
+        onClick={() => onChange(!checked)}
+        className="sidebar-toggle-switch"
+        style={{
+          backgroundColor: checked ? 'var(--color-accent)' : 'var(--color-border)',
+        }}
+      >
+        <span
+          className="sidebar-toggle-knob"
+          style={{ transform: checked ? 'translateX(14px)' : 'translateX(1px)' }}
+        />
+      </button>
+    </div>
+  );
+}
+
 export default function Sidebar({ filters, onFilterChange, total }: SidebarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -81,6 +116,24 @@ export default function Sidebar({ filters, onFilterChange, total }: SidebarProps
         </span>
       </div>
 
+      {/* ── 🚀 Startup Filters — TOP ── */}
+      <div className="mb-3">
+        <h3 className="text-xs font-semibold mb-2 uppercase tracking-wider" style={{ color: 'var(--color-accent)' }}>
+          🚀 Startup Filters
+        </h3>
+      </div>
+      <ToggleFilter id="filter-startup" label="Startup Only" checked={!!filters.startup_only} onChange={(v) => onFilterChange({ ...filters, startup_only: v || undefined })} />
+      <ToggleFilter id="filter-stealth" label="Stealth Only" checked={!!filters.stealth_only} onChange={(v) => onFilterChange({ ...filters, stealth_only: v || undefined })} />
+      <ToggleFilter id="filter-engineering" label="Engineering Only" checked={!!filters.engineering_only} onChange={(v) => onFilterChange({ ...filters, engineering_only: v || undefined })} />
+      <ToggleFilter id="filter-india" label="India Only" checked={!!filters.india_only} onChange={(v) => onFilterChange({ ...filters, india_only: v || undefined })} />
+      <ToggleFilter id="filter-founding" label="Founding Engineer" checked={!!filters.founding_only} onChange={(v) => onFilterChange({ ...filters, founding_only: v || undefined })} />
+      <ToggleFilter id="filter-remote-india" label="Remote India" checked={!!filters.remote_india} onChange={(v) => onFilterChange({ ...filters, remote_india: v || undefined })} />
+      <ToggleFilter id="filter-reloc" label="Offers Relocation" checked={!!filters.offers_relocation} onChange={(v) => onFilterChange({ ...filters, offers_relocation: v || undefined })} />
+      <SelectFilter id="filter-applymode" label="Apply Mode" value={filters.apply_mode_filter || ''} options={['', 'auto_apply', 'one_click', 'needs_review', 'external']} onChange={(v) => onFilterChange({ ...filters, apply_mode_filter: v || undefined })} />
+
+      <div style={{ borderTop: '1px solid var(--color-border)', margin: '12px 0' }} />
+
+      {/* ── Standard Filters ── */}
       <SelectFilter id="filter-role" label="Role" value={filters.role || ''} options={ROLES} onChange={(v) => update('role', v)} />
       <SelectFilter id="filter-level" label="Level" value={filters.level || ''} options={LEVELS} onChange={(v) => update('level', v)} />
       <SelectFilter id="filter-visa" label="Visa Sponsorship" value={filters.visa || ''} options={VISA} onChange={(v) => update('visa', v)} />

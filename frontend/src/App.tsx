@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import StartupFiltersBar from './components/StartupFiltersBar';
 import JobGrid from './components/JobGrid';
 import ResumeUpload from './components/ResumeUpload';
 import AgentToolbar from './components/AgentToolbar';
@@ -49,7 +50,7 @@ export default function App() {
     setActiveView('dashboard');
   };
 
-  const isAgentView = ['scan', 'score', 'tailor', 'batch', 'tracker'].includes(activeView);
+  const isAgentView = ['scan', 'score', 'tailor', 'batch', 'tracker', 'autoapply'].includes(activeView);
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-bg)' }}>
@@ -60,6 +61,15 @@ export default function App() {
         onSearch={handleSearch}
         onResumeUpload={handleResumeUpload}
       />
+
+      {/* 🚀 Startup Filters — Now below search bar, above content */}
+      {activeView === 'dashboard' && (
+        <StartupFiltersBar
+          filters={filters}
+          onFilterChange={handleFilterChange}
+        />
+      )}
+
       {/* Agent Toolbar — always visible */}
       <AgentToolbar
         onTabChange={handleAgentTab}

@@ -15,11 +15,31 @@ if _backend_dir not in sys.path:
 
 from routes import router
 from agent_routes import agent_router
+from ws_routes import ws_router
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Run agent coordinator on startup (best-effort, non-blocking)."""
+    """Inject startup seed data and run classifier on startup, then kick off coordinator."""
+    # ── Immediate: classify all existing jobs ──
+    try:
+        from store import store
+        from services.startup_classifier import classify_and_enrich, compute_startup_rank
+        # Classify ALL jobs (existing + new)
+        classified = 0
+        for job in list(store._jobs.values()):
+            try:
+                classify_and_enrich(job)
+                job.relevance_score = max(job.relevance_score, compute_startup_rank(job))
+                classified += 1
+            except Exception:
+                pass
+        store._save()
+        print(f"[main] Classified {classified} jobs for startup/stealth signals")
+    except Exception as e:
+        print(f"[main] Startup classify failed (non-fatal): {e}")
+
+    # ── Background: run full agent coordinator ──
     print("[main] Starting agent coordinator in background...")
     try:
         from coordinator import run_all_agents
@@ -49,6 +69,7 @@ app.add_middleware(
 
 app.include_router(router)
 app.include_router(agent_router)
+app.include_router(ws_router)
 
 
 @app.get("/")

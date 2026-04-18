@@ -2868,4 +2868,186 @@
 - [ ] https://job-boards.greenhouse.io/inmobi/jobs/6703420 | InMobi | Staff Data Scientist I
 - [ ] https://job-boards.greenhouse.io/inmobi/jobs/6761066 | InMobi | Staff Engineer I
 
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5191638008 | Anthropic | Cluster Deployment Engineer
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5192104008 | Anthropic | Global Leader, Applied AI Architects, Beneficial Deployments
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5191437008 | Anthropic | Partner Business Systems & AI Operations Lead
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5191775008 | Anthropic | Product Counsel, Claude Platform 
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5191785008 | Anthropic | Research Engineer, Safeguards Labs
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5191226008 | Anthropic | Software Engineer, Research Data Platform
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5192805008 | Anthropic | Solutions Architect, Applied AI (Commercial)
+- [ ] https://jobs.ashbyhq.com/openai/9b1b62f5-1400-4672-910a-fda6f975f642 | OpenAI | Full Stack Software Engineer, OpenAI Edu
+- [ ] https://jobs.ashbyhq.com/openai/e9627fa6-ac76-4899-9a93-9251419e61a0 | OpenAI | Software Engineer, Kernel Performance & AI Tooling
+- [ ] https://jobs.ashbyhq.com/openai/7ffa2a14-fa9c-46cb-a30a-1f7a35ae904a | OpenAI | Product Manager, API Infrastructure
+- [ ] https://jobs.ashbyhq.com/openai/ae3a32af-b862-45db-838c-7fb49d4bc27e | OpenAI | Software Engineer, Engineering Acceleration | Consumer Devices
+- [ ] https://jobs.ashbyhq.com/langchain/0a5dd30c-6da1-4095-bd96-b16f27eeb333 | LangChain | Solutions Architect (Remote)
+- [ ] https://jobs.ashbyhq.com/vapi/7adb10b2-1234-4e4c-b132-f990a91de048 | Vapi | Agent Engineer - NY
+- [ ] https://job-boards.greenhouse.io/discord/jobs/8509325002 | Discord | Engineering Manager, Social Commerce
+- [ ] https://job-boards.greenhouse.io/discord/jobs/8498984002 | Discord | Staff Software Engineer, Data Platform
+- [ ] https://jobs.ashbyhq.com/deepgram/844ec2d9-4256-4be0-a6c6-78ebf1391a78 | Deepgram | Solutions Architect (EST or PST)
+- [ ] https://jobs.ashbyhq.com/deepgram/be9609b4-b48d-4421-90e5-69049ad0d6ce | Deepgram | Solutions Architect (San Francisco, CA)
+- [ ] https://job-boards.greenhouse.io/gusto/jobs/7826266 | Gusto | Senior Paid Social Lead
+- [ ] https://job-boards.greenhouse.io/gusto/jobs/7822587 | Gusto | Staff Software Engineer, Payments / Risk
+- [ ] https://job-boards.greenhouse.io/dialpad/jobs/8499623002 | Dialpad | Forward Deployment Engineer
+- [ ] https://job-boards.greenhouse.io/dialpad/jobs/8475155002 | Dialpad | Sr. Software Development Engineer in Test
+- [ ] https://job-boards.greenhouse.io/dialpad/jobs/8490519002 | Dialpad | Sr. Software Engineer, Fullstack (Connect)
+- [ ] https://jobs.ashbyhq.com/langfuse/1745b263-e25e-4037-a3a8-d0460fbba165 | Langfuse | (Senior) Cloud Infrastructure Engineer
+- [ ] https://jobs.ashbyhq.com/langfuse/69bc6e7a-0304-4d81-ae72-7ccf5652a053 | Langfuse | (Senior) Backend Engineer (IAM and Billing)
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8504801002 | GitLab | CX Forward Deployed Engineer 
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8499587002 | GitLab | Legal Engineer
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8499907002 | GitLab | Professional Services Engineer - META
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8506618002 | GitLab | Staff Technical Program Manager
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7731685?gh_jid=7731685 | Cloudflare | Forward Deployed Engineer
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7822668?gh_jid=7822668 | Cloudflare | Procurement Analyst Intern
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7822659?gh_jid=7822659 | Cloudflare | Procurement Intern (JD)
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7822643?gh_jid=7822643 | Cloudflare | Procurement Strategy & Operations Intern 
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7807408?gh_jid=7807408 | Cloudflare | Response Engineer
+- [ ] https://jobs.ashbyhq.com/elevenlabs/2451b957-0ece-4e73-88e4-4196aac0ba86 | ElevenLabs | AI Creative Producer - Ads
+- [ ] https://stripe.com/jobs/search?gh_jid=7115730 | Stripe | Billing Solutions Architect
+- [ ] https://stripe.com/jobs/search?gh_jid=7657732 | Stripe | Security Engineer, Bridge
+- [ ] https://stripe.com/jobs/search?gh_jid=7820898 | Stripe | Security Engineer - Offensive Security
+- [ ] https://stripe.com/jobs/search?gh_jid=7827230 | Stripe | Security Engineer - Threat Detection
+- [ ] https://stripe.com/jobs/search?gh_jid=7718947 | Stripe | Tech Operations Associate, New Grad (Mexico)
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7703523003 | Postman | Senior Software Engineer, Monetization 
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7703334003 | Postman | Strategic Solutions Engineer
+- [ ] https://www.brex.com/careers/8510493002?gh_jid=8510493002 | Brex | Data Engineer
+- [ ] https://www.brex.com/careers/8512238002?gh_jid=8512238002 | Brex | People Business Partner Director, Engineering
+- [ ] https://jobs.lever.co/mistral/d9f2767e-cdab-4e07-9944-20bbc468613d | Mistral | AI Deployment Strategist, Cybersecurity - Paris
+- [ ] https://jobs.lever.co/mistral/f2e8ba75-bf5a-4976-bb96-c5d3e0f99366 | Mistral | Software Engineer, Backend (New-York)
+- [ ] https://jobs.lever.co/mistral/c2cf8b02-cb79-4e13-8717-25817813542d | Mistral | Systems Engineer, HPC
+- [ ] https://jobs.ashbyhq.com/sierra/b8a89b9a-70a1-4e47-874c-41542d1bc60a | Sierra | Software Engineer, Agent (Korean Speaking)
+- [ ] https://jobs.ashbyhq.com/sierra/1162dcd2-b181-49d5-9316-342cd68acbed | Sierra | Software Engineer, Agent (Thai Speaking)
+- [ ] https://jobs.ashbyhq.com/sierra/a4541730-ae7f-4771-b3e9-7f9da6cc5d23 | Sierra | Software Engineer, Agent (Cantonese Speaking)
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/8354773002/?gh_jid=8354773002 | Druva | Cloud Apps- Senior Staff Software Engineer
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/8335922002/?gh_jid=8335922002 | Druva | Manager, Engineering
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/8388069002/?gh_jid=8388069002 | Druva | Sales Engineer
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/8488232002/?gh_jid=8488232002 | Druva | Senior Partner Sales Engineer, SHI
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/8207141002/?gh_jid=8207141002 | Druva | Senior Staff Software Engineer, Distributed Filesystem
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/8192672002/?gh_jid=8192672002 | Druva | Senior Staff Software Engineer - Engineering Escalations 
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/7892681002/?gh_jid=7892681002 | Druva | Senior Staff Software Engineer (Foundation) 
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7781652 | Twilio | Applications Engineer 2
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7819432 | Twilio | Director, GTM Business Architecture
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7823588 | Twilio | Go-to-market Analyst Intern (June 22nd start, 12 weeks)
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7821487 | Twilio | Senior Sales System Engineer 3
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7785202 | Twilio | Software Engineer 
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7188174 | Twilio | Software Engineer (L2)
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7301401 | Twilio | Software Engineer (L3)
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7821462 | Twilio | Staff Engineer, AI Security
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7818178 | Twilio | Staff, Product Manager
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7234666 | Twilio | Staff Software Engineer
+- [ ] https://jobs.lever.co/hevodata/a7f26742-f965-4a59-840d-f7afa0a28176 | Hevo Data | AI Solution Engineer
+- [ ] https://jobs.lever.co/hevodata/5d4b119e-e92c-4b82-936e-30e4dc72d9a7 | Hevo Data | Customer Experience Engineer
+- [ ] https://jobs.lever.co/hevodata/2156d172-2fc4-49f3-b3ce-290b312da66e | Hevo Data | Customer Success Engineer
+- [ ] https://jobs.lever.co/hevodata/a9ba54d8-3f73-4696-b429-8306c9735bc4 | Hevo Data | Developer Tools Engineer
+- [ ] https://jobs.lever.co/hevodata/c8c4adc7-f565-46cb-8928-ae2b57555d48 | Hevo Data | Engineering Manager
+- [ ] https://jobs.lever.co/hevodata/ec4309c1-a516-4217-ac9a-89d1916049d3 | Hevo Data | Marketing Intern
+- [ ] https://jobs.lever.co/hevodata/c396cf1e-6a73-475d-b84b-aa90f916c8a2 | Hevo Data | SDE-  IV  / Lead Engineer
+- [ ] https://jobs.lever.co/hevodata/4d46a036-002b-4817-ae13-69185ffb4ce3 | Hevo Data | Senior Director, Sales Engineering
+- [ ] https://jobs.lever.co/hevodata/9e8b22dd-245b-4e8d-a2a4-3b905a3ff1f5 | Hevo Data | Senior Frontend Developer (Marketing)
+- [ ] https://jobs.lever.co/hevodata/a314fc47-9ba4-4b9e-a0da-0e22b9ea6a45 | Hevo Data | Senior Sales Engineer
+- [ ] https://jobs.lever.co/hevodata/5a453311-2088-4916-812e-ec402e9c6a1c | Hevo Data | Staff Software Engineer
+- [ ] https://jobs.lever.co/hevodata/d3d2c8fe-e9f1-4ba0-b4d3-f4a45c41b202 | Hevo Data | Technical Operations Analyst - Engineering
+- [ ] https://jobs.lever.co/hevodata/69ebcdbb-03cb-4800-91c6-426c60f91d65 | Hevo Data | Technical Program Manager
+- [ ] https://jobs.lever.co/paytm/0b0595a4-d2da-4837-abd0-4d4f4c99b5d7 | Paytm | Android - Senior Software Engineer
+- [ ] https://jobs.lever.co/paytm/08b36136-4ebf-4fca-89d9-d7cd76bd2378 | Paytm | Android - Senior Software Engineer (Nayara)
+- [ ] https://jobs.lever.co/paytm/ccea1551-1880-4602-af52-d219e1e8745f | Paytm | Android Engineer -Software Engineer (Nayara)
+- [ ] https://jobs.lever.co/paytm/fee01e91-09f3-44f7-9e75-3fb6f8e9d8f6 | Paytm | Area Sales Manager - Deputy Manager - Transit Offline-Railways
+- [ ] https://jobs.lever.co/paytm/d269d0ee-8e8f-4a36-bdb6-4ff38d36cb82 | Paytm | Area Sales Manager - Executive Manager - Transit Offline-Railways
+- [ ] https://jobs.lever.co/paytm/c9f17ca0-632c-46f0-b77f-ddfe823d6d00 | Paytm | Area Sales Manager - Manager - EDC Retail - Chennai
+- [ ] https://jobs.lever.co/paytm/555a5210-2360-4b75-90b4-5f99f53576cd | Paytm | Assistant  Manage-Compliance PML
+- [ ] https://jobs.lever.co/paytm/a995030e-7fc2-45be-a6e3-f1ef8c0a9ec3 | Paytm | Backend - Technical Lead
+- [ ] https://jobs.lever.co/paytm/c102778c-a889-40f5-87d8-c8a5846223a0 | Paytm | Backend SSE- Dot net Engineer  ( For Nayara )
+- [ ] https://jobs.lever.co/paytm/51a3cfdb-226e-4d8f-986a-f8e9fde8b9f0 | Paytm | Campaign Management- Team Lead- Insurance
+- [ ] https://jobs.lever.co/paytm/1fc84fa9-fdac-4310-903b-f783189ce82c | Paytm | Campaign Manager
+- [ ] https://jobs.lever.co/paytm/3a4f7615-b4d4-41be-9981-2ff36e68eb01 | Paytm | Campaign Operations- Assistant Manager- Paytm Ads
+- [ ] https://jobs.lever.co/paytm/8a63d356-2c16-436e-80ba-ae2341a15dd7 | Paytm | DevOps -  Technical Lead
+- [ ] https://jobs.lever.co/paytm/e6cfd701-46a3-432d-ab7f-13ce46bb0dff | Paytm | EM - Backend ( Insurance )
+- [ ] https://jobs.lever.co/paytm/df288eee-2cb7-4963-b44e-326515913cae | Paytm | HR Internship - Talent Acquisition
+- [ ] https://jobs.lever.co/paytm/87d34ca3-6bfd-4924-a9b8-ff189cbb8455 | Paytm | Intern - TA
+- [ ] https://jobs.lever.co/paytm/fa8b5870-a5ac-4c5f-9993-836e16beb815 | Paytm | Intern - Talent Acquisition
+- [ ] https://jobs.lever.co/paytm/b942c9fe-8c67-4d9d-bd74-a0006f9c173f | Paytm | Internal Audit- AM
+- [ ] https://jobs.lever.co/paytm/57abb4a0-1475-40ed-9880-61581ca077f9 | Paytm | KAM Lead - Team Lead - Mumbai/Pune
+- [ ] https://jobs.lever.co/paytm/53590d9f-903c-42b5-a3de-8265d64e9f8a | Paytm | Key Account Manager / Senior Key Account Manager - Ujjain
+- [ ] https://jobs.lever.co/paytm/1ab9da12-3932-4bef-ae7c-6dbe008f9e43 | Paytm | Key Accounts Management – Assistant Manager - Paytm Travel (Trains)
+- [ ] https://jobs.lever.co/paytm/8d3cfa49-096a-480f-a150-391c003a35cf | Paytm | Micro Market Manager - QR - Chennai
+- [ ] https://jobs.lever.co/paytm/03f7559d-1a12-4570-b142-87b71094382e | Paytm | Micro Market Manager - QR - Jaipur
+- [ ] https://jobs.lever.co/paytm/0e89d8ca-0e9f-4fdb-9218-f03acf8968a7 | Paytm | Principal Engineer - DevOps
+- [ ] https://jobs.lever.co/paytm/b47633d1-feab-4487-9a27-63ae68221b4b | Paytm | Process Trainer - Team Lead -MHD
+- [ ] https://jobs.lever.co/paytm/c6c6883e-fe18-46d8-9c39-2decda7fd4e2 | Paytm | Product Management -  Senior Product Manager - Payments
+- [ ] https://jobs.lever.co/paytm/1cd01955-1add-489f-a9c7-209042903c97 | Paytm | Product Management - AI Product Manager - Decision Engine
+- [ ] https://jobs.lever.co/paytm/f70a8c33-a50e-4d63-95ee-71f746aebd15 | Paytm | Product Management - Associate Product Manager - Telco
+- [ ] https://jobs.lever.co/paytm/efe0be48-91cb-424d-bc5c-ce87b740c65a | Paytm | Product Management - Product Manager - Lending
+- [ ] https://jobs.lever.co/paytm/bcd1320b-72a8-47e1-a062-15241381fdb3 | Paytm | Product Management - Product Manager - Lending Platform
+- [ ] https://jobs.lever.co/paytm/d73b511b-ae92-46f0-9aa1-ac10f2fbb84a | Paytm | Product Management - Product Manager - Paytm Money
+- [ ] https://jobs.lever.co/paytm/b909105c-269c-4726-b0af-f07ff2b2dd36 | Paytm | Product Management - Senior Product Manager - Agent & Merchant
+- [ ] https://jobs.lever.co/paytm/75992181-c0d0-44e7-805a-6dddfd0fe23b | Paytm | Product Management - Senior Product Manager - Lending Platform
+- [ ] https://jobs.lever.co/paytm/dccfda94-a960-4cfc-85bd-f60c89e133b8 | Paytm | Product Management - Senior Product Manager - Recharges & Utilities
+- [ ] https://jobs.lever.co/paytm/64241793-684f-4dde-9447-36a14e499d4e | Paytm | Product Management - Senior Product Manager - UPI
+- [ ] https://jobs.lever.co/paytm/9ceee46f-a726-4864-aa43-0039a1abe202 | Paytm | Product Management - Senior Product Manager (AI) - Agent
+- [ ] https://jobs.lever.co/paytm/ea9ecdbe-b68e-4238-9e51-4f36e711344b | Paytm | Product Management - Senior Product Manager- Lending Platform
+- [ ] https://jobs.lever.co/paytm/7310b497-4b98-4fbe-ba2e-e21d68205eeb | Paytm | Product Management Intern- Lending
+- [ ] https://jobs.lever.co/paytm/255aa024-39ae-4f74-a62b-b062ec12db97 | Paytm | Product Management- Associate Product Manager- Lending
+- [ ] https://jobs.lever.co/paytm/650d048f-1e1b-429b-96e0-e673c511cf9d | Paytm | Product Management- Product Manager- AI Devices
+- [ ] https://jobs.lever.co/paytm/ee8c39c3-837d-484e-937b-e0497bec2abe | Paytm | Product Management- Technical Product Manager
+- [ ] https://jobs.lever.co/paytm/b0d911e9-9f18-440e-b4a6-763693e4293a | Paytm | Product Manager - Telco
+- [ ] https://jobs.lever.co/paytm/92982003-5fe4-4909-9e37-83545e4f2398 | Paytm | Sales - Team Lead -  Transit Railway - Gaya
+- [ ] https://jobs.lever.co/paytm/d1823160-1389-471d-b5e2-e0dab39c2bed | Paytm | Sales - Team Lead -  Transit Railway - Jaipur
+- [ ] https://jobs.lever.co/paytm/75b6cab6-df11-4b64-8159-91dfa82262a7 | Paytm | Sales - Team Lead Mumbai
+- [ ] https://jobs.lever.co/paytm/d8f6791e-6bd8-418b-8c40-8e0fdbdeb1a3 | Paytm | Sales - Team Lead Service -Jaipur
+- [ ] https://jobs.lever.co/paytm/97190ab2-bae8-4c98-94f9-8306b970ca66 | Paytm | Sales - Team Lead- Aizawal-Oil & Gas
+- [ ] https://jobs.lever.co/paytm/56780ad5-35e6-4afa-b687-5078f5d3e026 | Paytm | Sales -Team Lead -Jaipur
+- [ ] https://jobs.lever.co/paytm/2d0c8313-b07a-46b7-8cf2-c8db864cb9f6 | Paytm | Sales -Team Lead- Raipur
+- [ ] https://jobs.lever.co/paytm/17514b0b-23f8-4002-b02d-e4d869abb1a9 | Paytm | Sales Manager -AI Inference & Enterprise Cloud
+- [ ] https://jobs.lever.co/paytm/ef99808f-0550-4228-bf9f-45f1403ce7fc | Paytm | Sales Team Lead - Hardoi- Railway Transit
+- [ ] https://jobs.lever.co/paytm/3a65879b-6959-45aa-9493-9cd38126e207 | Paytm | Sales Team Lead - Oil & Gas - Nainital
+- [ ] https://jobs.lever.co/paytm/e45c242d-005c-4396-88ad-3e463b761fc7 | Paytm | Sales Team Lead - Oil & Gas Adjacent- Jaipur
+- [ ] https://jobs.lever.co/paytm/5bcbf2c4-b74c-4911-a7ad-aa6325cf8b2e | Paytm | Sales Team Lead-QR - Indore/Ujjain
+- [ ] https://jobs.lever.co/paytm/a04ecde6-2d4c-478f-bff0-766ab014ff7c | Paytm | Sales Team Leader -Mumbai (QR Code & Soundbox Segment)
+- [ ] https://jobs.lever.co/paytm/7864512f-2247-4450-93a3-adc6c41d1263 | Paytm | Security Lead – Akamai CDN & WAF
+- [ ] https://jobs.lever.co/paytm/bd200f17-9eb9-4078-a01d-e19bfbebc645 | Paytm | Senior Associate - KAM (Jaipur) - EDC
+- [ ] https://jobs.lever.co/paytm/9bed771b-93f7-4b69-9701-98c52dcf3b50 | Paytm | Senior Associate - KAM (Udaipur) - EDC
+- [ ] https://jobs.lever.co/paytm/82dc0ea4-39ba-4add-9753-1744a1078558 | Paytm | Senior Associate - KAM (Ujjain) - EDC
+- [ ] https://jobs.lever.co/paytm/9b6006aa-52d0-49d3-bffd-1d602738f14d | Paytm | Senior Business Intelligence Analyst (Business & Product)-PML
+- [ ] https://jobs.lever.co/paytm/97c2de3c-80ea-4e63-909a-8d840b2c22b3 | Paytm | Senior Data Engineer
+- [ ] https://jobs.lever.co/paytm/d8eb9105-f852-4f71-a835-292032f980dd | Paytm | Senior Software Engineer - Backend
+- [ ] https://jobs.lever.co/paytm/abb211f9-58b8-46cf-9efe-fcbb74839c65 | Paytm | Senior Software Engineer - Backend (Java & Golang )
+- [ ] https://jobs.lever.co/paytm/2adb1c32-aca5-4469-b1b9-c9e78112c7e5 | Paytm | Senior Software Engineer - Frontend
+- [ ] https://jobs.lever.co/paytm/b06c8054-f39e-4350-8a5e-f7fd5c74d643 | Paytm | Senior Software Engineer- Backend(Gold)
+- [ ] https://jobs.lever.co/paytm/beaad2eb-7e5a-46a7-95fb-70e1e13f2308 | Paytm | Senior Technical Lead -  Backend(Java&Golang)
+- [ ] https://jobs.lever.co/paytm/3ee770c1-54e1-46df-9535-00ea294ad097 | Paytm | Service Team Lead - (QR) - Chennai
+- [ ] https://jobs.lever.co/paytm/78df1934-718a-48f9-8a9f-4a417c0371be | Paytm | Service Team Lead - (QR) - Madurai
+- [ ] https://jobs.lever.co/paytm/b269d598-4c39-4201-a7f2-9c039515519d | Paytm | Service Team Lead - Mumbai
+- [ ] https://jobs.lever.co/paytm/f0525813-7ab8-4a00-bfb2-423a855ff181 | Paytm | Sr.KAM Lead / ASM - DM / Manager - EDC Retail (Field Sales) - Chennai
+- [ ] https://jobs.lever.co/paytm/c298cc86-560a-4b3b-87fb-40fb0b9c8ee5 | Paytm | Staff AI Platform Engineer - Inference & Agentic Systems
+- [ ] https://jobs.lever.co/paytm/c2b659f6-942c-4d75-8f60-b19a7b143b7d | Paytm | Team lead - Customer Acquisition - Chennai
+- [ ] https://jobs.lever.co/paytm/cbb5299e-b81c-4346-b645-c62858be8575 | Paytm | Team Lead - Process Quality Trainer - Lending Collection
+- [ ] https://jobs.lever.co/paytm/82218e2e-0280-4f5c-b521-a28a2fbaf948 | Paytm | Team lead - Sales _ Chennai
+- [ ] https://jobs.lever.co/paytm/c9256f0a-b168-44a9-8c14-22df654c0806 | Paytm | Team Leader  - Customer Acquisition - Mumbai
+- [ ] https://jobs.lever.co/paytm/3c729acc-5905-4dfa-8362-75cba28b9f40 | Paytm | Technical Lead - Backend
+- [ ] https://jobs.lever.co/paytm/e639a750-9f9b-48d3-9cf4-df23d72efa6c | Paytm | Technical Lead - Backend (Java or Golang)
+- [ ] https://jobs.lever.co/paytm/d678b53a-37ef-47df-8f98-2d8bc3bd305b | Paytm | Technical Lead - Data Engineering
+- [ ] https://jobs.lever.co/paytm/8f07fc86-3e04-4624-a57b-9134bd2eca99 | Paytm | Technical Lead - Frontend
+- [ ] https://jobs.lever.co/paytm/4181d1dd-a533-4252-937d-184bf6ce7f20 | Paytm | Technical Lead- Backend(Gold)
+- [ ] https://jobs.lever.co/paytm/437b0526-8bba-4b24-aa93-4eb8b641aadc | Paytm | Technical Program Manager- TPM
+- [ ] https://jobs.lever.co/paytm/fd094403-e242-4cb5-9de0-3bf32ef8de5b | Paytm | TechOps Engineer
+- [ ] https://jobs.lever.co/mindtickle/f33e022d-89a2-46d0-8a2d-2b2b83bb2e85 | Mindtickle | AI Product Engineer
+- [ ] https://jobs.lever.co/mindtickle/166a3fea-6a19-48da-9a7d-bbff7d3c2f95 | Mindtickle | Customer Success Engineer - II
+- [ ] https://jobs.lever.co/mindtickle/b96342a2-a4a5-4281-8ccf-324b28a2e962 | Mindtickle | Group Product Manager
+- [ ] https://jobs.lever.co/mindtickle/a2bc1371-eade-465a-a017-46c746742baa | Mindtickle | Lead Design Engineer
+- [ ] https://jobs.lever.co/mindtickle/8b726b19-56ac-4243-ba67-117f12dbfb8e | Mindtickle | SDE II (AI/ML)
+- [ ] https://jobs.lever.co/mindtickle/da71709f-88c1-435e-8da6-8126dedc81cc | Mindtickle | SDE III Backend
+- [ ] https://jobs.lever.co/mindtickle/b07a60a1-2859-47e9-a65d-b5d6e8a3d273 | Mindtickle | Senior Manager, Customer Success Engineering
+- [ ] https://jobs.lever.co/mindtickle/e55245fd-983c-4564-9b3f-491b7d16b8e8 | Mindtickle | Senior Product Manager
+- [ ] https://jobs.lever.co/mindtickle/37dd13ed-f6f2-42a1-887c-f251bd82720e | Mindtickle | Senior Solutions Architect (NAMER)
+- [ ] https://jobs.lever.co/mindtickle/59f53c64-fd11-4e08-a60d-9f72e5eb6649 | Mindtickle | Senior Technical Program Manager
+- [ ] https://jobs.lever.co/mindtickle/a09d5193-d0ba-480c-980d-418c205d185f | Mindtickle | SME Engineer IT
+- [ ] https://jobs.lever.co/mindtickle/5a1e9cb0-cf46-4b74-b3cd-c735e760a18e | Mindtickle | Software Development Engineer - II
+- [ ] https://jobs.lever.co/mindtickle/477ff38c-f0d4-4655-b714-ed6205975c11 | Mindtickle | Software Development Engineer - II (Tech Solution)
+- [ ] https://jobs.lever.co/mindtickle/df3c6429-8f14-4821-8672-1139b573dd4d | Mindtickle | Software Development Engineer - III
+- [ ] https://jobs.lever.co/mindtickle/fb527c71-fced-45bf-adb5-c6eed7b57335 | Mindtickle | Software Development Engineer in Test- 1
+- [ ] https://jobs.lever.co/mindtickle/c70487d7-c318-42d4-8dbf-9f91976f1fe7 | Mindtickle | Software Development Engineer- III DevOps
+
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7778849?gh_jid=7778849 | Cloudflare | Forward Deployed Engineer
+- [ ] https://jobs.lever.co/hevodata/f2eaa150-62d7-4e81-9abb-d1393b6ac2b8 | Hevo Data | Customer Success Engineer
+- [ ] https://jobs.lever.co/paytm/a19ecbdd-f1b4-4714-8488-eb666febb007 | Paytm | Product Management- Associate Product Manager- Lending
+
 ## Processed

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Job, Founder } from '../types';
 import { generateColdDM } from '../api';
+import ApplyModal from './ApplyModal';
 
 interface JobCardProps {
   job: Job;
@@ -101,6 +102,7 @@ export default function JobCard({ job, index }: JobCardProps) {
   const [coldMsg, setColdMsg] = useState(job.cold_message || '');
   const [loadingDM, setLoadingDM] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [showApply, setShowApply] = useState(false);
 
   const handleColdDM = async () => {
     setLoadingDM(true);
@@ -179,8 +181,54 @@ export default function JobCard({ job, index }: JobCardProps) {
               Visa: {job.visa_sponsorship}
             </span>
           )}
+          {/* ── Startup & Stealth Badges ── */}
+          {job.is_startup && (
+            <span className="badge startup-badge">🚀 Startup</span>
+          )}
+          {job.is_stealth && (
+            <span className="badge stealth-badge">🔒 Stealth</span>
+          )}
+          {job.offers_relocation && (
+            <span className="badge relocation-badge">🌍 Relocation</span>
+          )}
+          {job.apply_mode === 'auto_apply' && (
+            <span className="badge" style={{ backgroundColor: '#059669', color: '#fff' }}>⚡ Auto Apply</span>
+          )}
+          {job.apply_mode === 'one_click' && (
+            <span className="badge" style={{ backgroundColor: '#3b82f6', color: '#fff' }}>🔵 One-Click</span>
+          )}
+          {job.apply_mode === 'needs_review' && (
+            <span className="badge" style={{ backgroundColor: '#f59e0b', color: '#fff' }}>⚠️ Review</span>
+          )}
+          {job.match_score != null && job.match_score > 0 && (
+            <span className="badge match-score-badge" style={{
+              backgroundColor: job.match_score > 70 ? '#059669' : job.match_score > 40 ? '#3b82f6' : '#6b7280',
+              color: '#fff',
+            }}>
+              🎯 {Math.round(job.match_score)}%
+            </span>
+          )}
         </div>
       </div>
+
+      {/* ── Startup Tags Row ── */}
+      {job.startup_tags && job.startup_tags.length > 0 && (
+        <div className="flex flex-wrap gap-1 mb-2">
+          {job.startup_tags.filter(t => !['Startup', 'India', 'Stealth'].includes(t)).slice(0, 6).map((tag, i) => (
+            <span key={i} className="startup-tag-chip">{tag}</span>
+          ))}
+        </div>
+      )}
+
+      {/* ── Match Reasons ── */}
+      {job.match_reasons && job.match_reasons.length > 0 && (
+        <div className="match-reasons-box">
+          <span className="match-reasons-label">🎯 Why this matches:</span>
+          {job.match_reasons.slice(0, 3).map((r, i) => (
+            <span key={i} className="match-reason-item">• {r}</span>
+          ))}
+        </div>
+      )}
 
       {/* Meta Row: salary, team size, funding, location, work type */}
       <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs mb-3" style={{ color: 'var(--color-muted)' }}>
@@ -206,6 +254,18 @@ export default function JobCard({ job, index }: JobCardProps) {
         )}
         {job.work_type && (
           <span className="capitalize">🏢 {job.work_type}</span>
+        )}
+        {job.posted_date && (
+          <span>🕐 {(() => {
+            try {
+              const d = Math.floor((Date.now() - new Date(job.posted_date).getTime()) / 86400000);
+              if (d === 0) return 'Today';
+              if (d === 1) return '1d ago';
+              if (d < 7) return `${d}d ago`;
+              if (d < 30) return `${Math.floor(d / 7)}w ago`;
+              return `${Math.floor(d / 30)}mo ago`;
+            } catch { return ''; }
+          })()}</span>
         )}
       </div>
 
@@ -458,18 +518,17 @@ export default function JobCard({ job, index }: JobCardProps) {
           {loadingDM ? 'Generating...' : copied ? '✓ Copied!' : '📋 Copy Cold DM'}
         </button>
 
-        {job.job_url && (
-          <a
-            href={job.job_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="px-3 py-1.5 rounded-lg text-xs font-medium text-white"
-            style={{ backgroundColor: 'var(--color-accent)', textDecoration: 'none' }}
-          >
-            Apply →
-          </a>
-        )}
+        <button
+          id={`apply-${job.id}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowApply(true);
+          }}
+          className="px-3 py-1.5 rounded-lg text-xs font-medium text-white cursor-pointer"
+          style={{ backgroundColor: 'var(--color-accent)', border: 'none' }}
+        >
+          🚀 Apply →
+        </button>
 
         {job.company_website && (
           <a
@@ -484,6 +543,11 @@ export default function JobCard({ job, index }: JobCardProps) {
           </a>
         )}
       </div>
+
+      {/* Apply Modal */}
+      {showApply && (
+        <ApplyModal job={job} onClose={() => setShowApply(false)} />
+      )}
 
       {/* Cold DM preview */}
       {coldMsg && (

@@ -3,9 +3,10 @@ import ScorePanel from './agents/ScorePanel';
 import TailorPanel from './agents/TailorPanel';
 import BatchPanel from './agents/BatchPanel';
 import TrackerPanel from './agents/TrackerPanel';
+import AutoApplyDashboard from './AutoApplyDashboard';
 import '../agents.css';
 
-type AgentView = 'scan' | 'score' | 'tailor' | 'batch' | 'tracker';
+type AgentView = 'scan' | 'score' | 'tailor' | 'batch' | 'tracker' | 'autoapply';
 
 const VIEW_META: Record<AgentView, { icon: string; label: string }> = {
   scan: { icon: '🔍', label: 'Scan Agent' },
@@ -13,6 +14,7 @@ const VIEW_META: Record<AgentView, { icon: string; label: string }> = {
   tailor: { icon: '✂️', label: 'Tailor CV Agent' },
   batch: { icon: '⚡', label: 'Batch Agent' },
   tracker: { icon: '📋', label: 'Tracker Agent' },
+  autoapply: { icon: '🚀', label: 'Auto Apply' },
 };
 
 interface AgentFullPageProps {
@@ -39,6 +41,7 @@ export default function AgentFullPage({ view, onBack }: AgentFullPageProps) {
         {view === 'tailor' && <TailorPanel />}
         {view === 'batch' && <BatchPanel />}
         {view === 'tracker' && <TrackerPanel />}
+        {view === 'autoapply' && <AutoApplyDashboard />}
       </div>
     </div>
   );

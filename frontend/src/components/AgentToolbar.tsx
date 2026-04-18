@@ -3,7 +3,7 @@ import { fetchAgentHealth } from '../api/agentApi';
 import type { AgentHealthResponse } from '../types/agentTypes';
 import '../agents.css';
 
-export type AgentTab = 'scan' | 'score' | 'tailor' | 'batch' | 'tracker';
+export type AgentTab = 'scan' | 'score' | 'tailor' | 'batch' | 'tracker' | 'autoapply';
 
 const TABS: { key: AgentTab; icon: string; label: string; color: string }[] = [
   { key: 'scan', icon: '🔍', label: 'Scan', color: '#06b6d4' },
@@ -11,6 +11,7 @@ const TABS: { key: AgentTab; icon: string; label: string; color: string }[] = [
   { key: 'tailor', icon: '✂️', label: 'Tailor CV', color: '#d946ef' },
   { key: 'batch', icon: '⚡', label: 'Batch', color: '#f59e0b' },
   { key: 'tracker', icon: '📋', label: 'Tracker', color: '#3b82f6' },
+  { key: 'autoapply', icon: '🚀', label: 'Auto Apply', color: '#059669' },
 ];
 
 interface AgentToolbarProps {

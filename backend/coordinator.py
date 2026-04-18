@@ -24,6 +24,8 @@ from agents.apimart_enrichment import enrich_jobs_with_apimart
 from agents.founder_discovery import discover_founders
 from agents.diverse_seed import get_diverse_seed_jobs
 from agents.diverse_seed_extra import get_extra_seed_jobs
+from services.startup_seed import get_startup_seed_jobs
+from services.startup_classifier import classify_and_enrich, compute_startup_rank
 
 
 async def _run_agent(name: str, coro):
@@ -75,6 +77,14 @@ async def run_all_agents():
     extra_seed_jobs = get_extra_seed_jobs()
     all_jobs.extend(extra_seed_jobs)
     print(f"[coordinator] Added {len(extra_seed_jobs)} extra diverse startup jobs")
+
+    # Phase 1c: Indian startup engineering seed
+    try:
+        startup_seed_jobs = get_startup_seed_jobs()
+        all_jobs.extend(startup_seed_jobs)
+        print(f"[coordinator] Added {len(startup_seed_jobs)} Indian startup engineering jobs")
+    except Exception as e:
+        print(f"[coordinator] startup_seed failed: {e}")
 
     print(f"[coordinator] Collected {len(all_jobs)} raw jobs from all agents")
 
@@ -128,9 +138,27 @@ async def run_all_agents():
 
     print(f"[coordinator] Gemini-enriched {enriched_count} JD summaries")
 
-    # Re-score and re-store with enriched data
+    # Phase 5: Startup classification and re-ranking
+    print("[coordinator] Running startup classification...")
+    startup_count = 0
+    stealth_count = 0
+    for job in all_jobs:
+        try:
+            classify_and_enrich(job)
+            if job.is_startup:
+                startup_count += 1
+            if job.is_stealth:
+                stealth_count += 1
+        except Exception:
+            pass
+    print(f"[coordinator] Classified {startup_count} startups, {stealth_count} stealth")
+
+    # Re-score with startup-aware ranking
     for job in all_jobs:
         job.relevance_score = _compute_score(job)
+        # Blend with startup rank
+        startup_rank = compute_startup_rank(job)
+        job.relevance_score = round(max(job.relevance_score, startup_rank), 2)
 
     store.add_jobs(all_jobs)
     print(f"[coordinator] OK Final store: {store.count} active jobs after enrichment")
