@@ -214,4 +214,5 @@ export interface ApplyResponse {
   application: ApplicationRecord;
   email: { success: boolean; message: string };
   apply_url: string;
+  error?: string;
 }
