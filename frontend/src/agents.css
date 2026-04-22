@@ -920,6 +920,7 @@
   }
 }
 
+
 /* ── Inline Filter Pills ─────────────────────────────── */
 .agent-filter-pills {
   display: flex;
@@ -1020,6 +1021,7 @@
     display: none;
   }
 }
+
 
 /* ── Expanded Agent Panel ──────────────────────────────── */
 .agent-panel-expand {

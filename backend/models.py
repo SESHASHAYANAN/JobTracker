@@ -79,27 +79,6 @@ class Job(BaseModel):
     url_verified: bool = False
     url_verification_error: Optional[str] = None
 
-    def generate_id(self) -> str:
-        raw = f"{self.company_slug}|{self.role_title}|{self.country or ''}|{self.city or ''}"
-        self.id = hashlib.md5(raw.encode()).hexdigest()
-        return self.id
-
-
-# ── Application Profile ──────────────────────────────────
-
-class ApplicationProfile(BaseModel):
-    full_name: str = ""
-    email: str = ""
-    phone: str = ""
-    location: str = ""
-    work_authorization: str = ""
-    notice_period: str = ""
-    years_of_experience: int = 0
-    linkedin_url: str = ""
-    github_url: str = ""
-    portfolio_url: str = ""
-    resume_text: str = ""
-    resume_file_path: Optional[str] = None  # Path to uploaded PDF on disk
     cover_letter_template: str = ""
     preferred_titles: list[str] = Field(default_factory=list)
     preferred_cities: list[str] = Field(default_factory=list)

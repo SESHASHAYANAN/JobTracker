@@ -60,58 +60,6 @@ export default function AgentToolbar({ onTabChange, activeTab: controlledTab, fi
     onFilterChange(cleared);
   };
 
-  return (
-    <div className="agent-toolbar-wrapper">
-      {/* Compact Toolbar Row */}
-      <div className="agent-toolbar">
-        <div className="agent-toolbar-left">
-          <div className="agent-toolbar-badge">
-            <span className="agent-toolbar-badge-icon">AI</span>
-            <span className="agent-toolbar-badge-label">Agent Suite</span>
-          </div>
-
-          {/* Health indicator */}
-          {health && (
-            <div className={`agent-toolbar-health ${health.status === 'ok' ? 'health-ok' : 'health-warn'}`}>
-              <span className={`agent-toolbar-dot ${health.status === 'ok' ? 'dot-ok' : 'dot-warn'}`} />
-              {health.status === 'ok' ? 'Connected' : 'Degraded'}
-            </div>
-          )}
-
-          {health && (
-            <div className={`agent-toolbar-health ${health.cv_loaded ? 'health-cv' : 'health-nocv'}`}>
-              📄 {health.cv_loaded ? 'CV Loaded' : 'No CV'}
-            </div>
-          )}
-
-          {/* ── Filter Pills — inline after Agent Suite ── */}
-          {filters && onFilterChange && (
-            <div className="agent-filter-pills">
-              <span className="agent-filter-divider" />
-              {FILTER_PILLS.map(pill => {
-                const active = !!filters[pill.key];
-                return (
-                  <button
-                    key={pill.key}
-                    className={`agent-filter-pill ${active ? 'agent-filter-pill-active' : ''}`}
-                    onClick={() => toggleFilter(pill.key)}
-                    title={pill.label}
-                    style={{
-                      '--pill-color': pill.color,
-                    } as React.CSSProperties}
-                  >
-                    <span className="agent-filter-pill-icon">{pill.icon}</span>
-                    <span className="agent-filter-pill-label">{pill.label}</span>
-                  </button>
-                );
-              })}
-              {activeFilterCount > 0 && (
-                <button className="agent-filter-clear" onClick={clearAllFilters} title="Clear all filters">
-                  ✕ Clear ({activeFilterCount})
-                </button>
-              )}
-            </div>
-          )}
         </div>
 
         {/* Agent Tab Buttons */}

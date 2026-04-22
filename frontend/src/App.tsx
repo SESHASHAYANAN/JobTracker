@@ -9,52 +9,6 @@ import type { AgentTab } from './components/AgentToolbar';
 import { useJobs } from './hooks/useJobs';
 import { useTheme } from './hooks/useTheme';
 import { refreshJobs, getRefreshStatus } from './api';
-import { Filters } from './types';
-import './index.css';
-
-type AppView = 'dashboard' | 'resume' | AgentTab;
-
-export default function App() {
-  const { dark, toggle } = useTheme();
-  const { jobs, total, loading, error, hasMore, filters, updateFilters, loadMore, refresh } = useJobs();
-  const [searchDebounce, setSearchDebounce] = useState<ReturnType<typeof setTimeout> | null>(null);
-  const [activeView, setActiveView] = useState<AppView>('dashboard');
-  const [refreshing, setRefreshing] = useState(false);
-  const [needsRefresh, setNeedsRefresh] = useState(false);
-  const [refreshMsg, setRefreshMsg] = useState('');
-
-  // Check if data needs refresh on mount
-  useEffect(() => {
-    getRefreshStatus()
-      .then(status => {
-        setNeedsRefresh(status.needs_refresh);
-        if (status.needs_refresh) {
-          setRefreshMsg(`${status.fake_seed_jobs} of ${status.total_jobs} jobs are placeholder data.`);
-        }
-      })
-      .catch(() => {});
-  }, []);
-
-  const handleRefreshJobs = async () => {
-    setRefreshing(true);
-    setRefreshMsg('🔄 Fetching real jobs from Indeed, LinkedIn, Glassdoor...');
-    try {
-      const result = await refreshJobs(undefined, 5);
-      if (result.status === 'ok') {
-        setRefreshMsg(`✅ Loaded ${result.count} real jobs with direct apply URLs!`);
-        setNeedsRefresh(false);
-        // Reload the jobs list
-        if (refresh) refresh();
-        else window.location.reload();
-      } else {
-        setRefreshMsg(`⚠️ ${result.message || 'Could not fetch jobs'}`);
-      }
-    } catch (e) {
-      setRefreshMsg(`❌ Refresh failed: ${e instanceof Error ? e.message : 'Unknown error'}`);
-    } finally {
-      setRefreshing(false);
-    }
-  };
 
   const handleSearch = useCallback(
     (val: string) => {

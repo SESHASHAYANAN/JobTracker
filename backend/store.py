@@ -186,12 +186,14 @@ class JobStore:
     def get_job_by_id(self, job_id: str) -> Optional[Job]:
         return self._jobs.get(job_id)
 
+
     def get_unverified_jobs(self, limit: int = 50) -> list[Job]:
         """Get jobs that haven't been URL-verified yet."""
         return [
             j for j in self._jobs.values()
             if j.is_hiring and j.status == "active" and not j.url_verified and j.job_url
         ][:limit]
+
 
     def update_job(self, job: Job):
         with self._lock:
