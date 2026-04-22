@@ -3050,4 +3050,164 @@
 - [ ] https://jobs.lever.co/hevodata/f2eaa150-62d7-4e81-9abb-d1393b6ac2b8 | Hevo Data | Customer Success Engineer
 - [ ] https://jobs.lever.co/paytm/a19ecbdd-f1b4-4714-8488-eb666febb007 | Paytm | Product Management- Associate Product Manager- Lending
 
+- [ ] https://jobs.ashbyhq.com/langchain/dea6e10a-5cc8-4956-85b4-1ca88b8c0a95 | LangChain | Deployed Engineer (Las Vegas)
+- [ ] https://jobs.ashbyhq.com/langchain/3f793a73-9b0d-456b-9a7c-16441e3e6e69 | LangChain | Deployed Engineer (Denver)
+- [ ] https://jobs.ashbyhq.com/langchain/2a1f67e3-7509-4c92-9ec8-2e645d00c3eb | LangChain | Deployed Engineer (Phoenix)
+- [ ] https://jobs.ashbyhq.com/langchain/91bb582c-fe9a-4651-9e9f-cdb452ec6532 | LangChain | Deployed Engineer (Salt Lake City)
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5193973008 | Anthropic | Applied AI Architect (Startups)
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5196015008 | Anthropic | Enterprise Account Executive, Federal Civilian Sales - State & International
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5194827008 | Anthropic | Field Services Engineer
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5195705008 | Anthropic | Security Engineer - Threat Intel
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5191433008 | Anthropic | Software Engineer, Safeguards Foundations (Internal Tooling)
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5073998008 | Anthropic |  Staff Software Engineer, Continuous Integration
+- [ ] https://jobs.ashbyhq.com/elevenlabs/01d0899b-0e40-4af2-a859-5d21962666b1 | ElevenLabs | Infrastructure Engineer (Data & Automations)
+- [ ] https://job-boards.greenhouse.io/discord/jobs/8245153002 | Discord | Staff Software Engineer, Mobile Architecture
+- [ ] https://jobs.ashbyhq.com/cohere/9bdbb821-6536-4090-8faa-a2b04a70bbf1 | Cohere | Engineering Manager, FDE Infrastructure (EMEA)
+- [ ] https://jobs.ashbyhq.com/cohere/4f9c534b-5e72-4115-8b96-b7a769a2fabd | Cohere | Security Officer - Sovereign AI
+- [ ] https://jobs.ashbyhq.com/cohere/3cb6d334-90f5-4195-9870-0e0c61e58d63 | Cohere | Summer HR Intern – Rippling HRIS Implementation
+- [ ] https://job-boards.greenhouse.io/gongio/jobs/4387396006 | Gong | DevOps Engineering Manager
+- [ ] https://job-boards.greenhouse.io/gongio/jobs/4627758006 | Gong | Engineering Team Lead - Dashboards
+- [ ] https://job-boards.greenhouse.io/gongio/jobs/4670235006 | Gong | Senior Product Security Architect
+- [ ] https://job-boards.greenhouse.io/gongio/jobs/4672109006 | Gong | Senior Product Security Engineer
+- [ ] https://jobs.ashbyhq.com/deepgram/378e83b4-28c0-4b4e-8cf0-9355712bd06d | Deepgram | Billing & Analytics Software Engineer
+- [ ] https://job-boards.greenhouse.io/dialpad/jobs/8407062002 | Dialpad | Engineering Manager, AI Transformation
+- [ ] https://jobs.ashbyhq.com/n8n/49e569f0-503e-4e42-a1ba-7e63684e90d3 | n8n | Sr Product Security Engineer | Remote | Europe
+- [ ] https://jobs.ashbyhq.com/n8n/42c09bd6-1571-493d-b5af-f2de77f4f0ba | n8n | Director of Engineering | Remote | Europe
+- [ ] https://jobs.ashbyhq.com/zapier/03aee44c-e6db-479f-94c4-1eda8cc6bf9f | Zapier | Sales Engineer, Enterprise
+- [ ] https://jobs.ashbyhq.com/zapier/16e61b90-b31d-4328-b81c-ba543248640e | Zapier | Director of Engineering, Infrastructure
+- [ ] https://jobs.ashbyhq.com/sierra/d9c0aa93-e35d-4752-9cef-4c39dcad5365 | Sierra | Forward Deployed Infrastructure Engineer
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7835625 | Twilio | Graphic Design Intern (June 22nd start, 12 weeks)
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7755317 | Twilio | Senior Manager, Platform Engineering - Secure Supply Chain
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7822831 | Twilio | Software Engineer 
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7061880 | Twilio | Staff Machine Learning Engineer
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7821489 | Twilio | Technical Program Manager (P4)
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7761378 | Twilio | Technical Support Engineer
+- [ ] https://jobs.ashbyhq.com/render/a537929c-d3b2-4289-a6aa-33dca9003c6a | Render | Product Manager, Security, Trust & Governance 
+- [ ] https://jobs.ashbyhq.com/render/421729c2-5f02-481e-a373-d5b28efdf458 | Render | Staff Design Engineer
+- [ ] https://job-boards.greenhouse.io/sourcegraph91/jobs/5973064004 | Sourcegraph | Support Engineer - EMEA [IC2]
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8497728002 | GitLab | Customer Success Engineer - Japan
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8510488002 | GitLab | Director, Enterprise Architecture & Intelligent Automation
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8493970002 | GitLab | G&A Engineer, Netsuite/Claude 
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8481029002 | GitLab | Intermediate Backend Engineer, Database Automation (Ruby)
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8504232002 | GitLab | Intermediate Site Reliability Engineer, Environment Automation
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8514945002 | GitLab | Senior Backend Engineer (AI), Pipeline Execution
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8509723002 | GitLab | Senior Solutions Architect - CEUR
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8508027002 | GitLab | Staff Backend Engineer, Analytics Instrumentation (Golang)
+- [ ] https://www.cockroachlabs.com/careers/job/?gh_jid=7836747 | CockroachDB | Sr. Staff Sales Engineer - London, UK
+- [ ] https://www.cockroachlabs.com/careers/job/?gh_jid=7409253 | CockroachDB | Sr. Staff Sales Engineer - US West
+- [ ] https://careers.datadoghq.com/detail/7811662/?gh_jid=7811662 | Datadog | Enterprise Sales Engineer
+- [ ] https://careers.datadoghq.com/detail/7391788/?gh_jid=7391788 | Datadog | IT Support Technician Intern
+- [ ] https://careers.datadoghq.com/detail/7721661/?gh_jid=7721661 | Datadog | Open Source Program Developer
+- [ ] https://careers.datadoghq.com/detail/7833865/?gh_jid=7833865 | Datadog | Senior Product Manager - Code Security
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7612557003 | Postman | Head of Engineering (Customer Journey and Monetization)
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7583237003 | Postman | Software Engineer - Frontend, Performance and Monitoring
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7578716003 | Postman | Staff Software Engineer, Business Platform
+- [ ] https://careers.duolingo.com/jobs/8512566002?gh_jid=8512566002 | Duolingo | Senior Software Engineer
+- [ ] https://stripe.com/jobs/search?gh_jid=7826765 | Stripe | Backend Engineer, AI Security
+- [ ] https://stripe.com/jobs/search?gh_jid=7768979 | Stripe | Product Manager, EMEA Payments Lead
+- [ ] https://stripe.com/jobs/search?gh_jid=7834628 | Stripe | Product Manager, SEA
+- [ ] https://stripe.com/jobs/search?gh_jid=7826761 | Stripe | Software Engineer, Security Analytics Infrastructure
+- [ ] https://stripe.com/jobs/search?gh_jid=7396509 | Stripe | Solutions Architect, Platforms
+- [ ] https://stripe.com/jobs/search?gh_jid=7812856 | Stripe | Staff Product Manager, Enterprise (Industries) 
+- [ ] https://stripe.com/jobs/search?gh_jid=7594376 | Stripe | Technical Account Manager, German OR Polish OR Ukrainian Speaking
+- [ ] https://jobs.ashbyhq.com/ramp/d818443f-d4c5-4eab-892d-3715a935c165 | Ramp | Software Engineer, Banking
+- [ ] https://job-boards.greenhouse.io/phonepe/jobs/7710926003 | PhonePe | Intern, People Experience
+- [ ] https://jobs.lever.co/cred/cc10a8ae-9066-44fe-bb0c-d784093960cf | CRED | AML operations
+- [ ] https://job-boards.greenhouse.io/inmobi/jobs/7793050 | InMobi | Intern - Industrial Trainee
+- [ ] https://job-boards.greenhouse.io/inmobi/jobs/7814028 | InMobi | Senior Product Manager - Sparks
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7834688?gh_jid=7834688 | Cloudflare | Content Marketing Intern (July to December 2026)
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7778796?gh_jid=7778796 | Cloudflare | Forward Deployed Engineer
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7821913?gh_jid=7821913 | Cloudflare | Senior Security Engineer - Security Technology Delivery
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7820696?gh_jid=7820696 | Cloudflare | Senior Solutions Architect
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7826822?gh_jid=7826822 | Cloudflare | Senior Solutions Engineer, Enterprise Accounts - San Francisco
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7822857?gh_jid=7822857 | Cloudflare | Senior Strategic Solutions Engineer, Bengaluru
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7505637?gh_jid=7505637 | Cloudflare | Software Engineer, Workers Observability
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7831414?gh_jid=7831414 | Cloudflare | Solutions Engineer, Central & Eastern Europe - Czech Speaking
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7826916?gh_jid=7826916 | Cloudflare | Solutions Engineering Manager
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7673477?gh_jid=7673477 | Cloudflare | Strategic Partnerships Director, Content & AI Ecosystem
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/8488969002/?gh_jid=8488969002 | Druva | Senior Partner Sales Engineer
+- [ ] https://jobs.ashbyhq.com/replit/12635a4d-290e-4b50-a2ae-11b3bbb74fe5 | Replit | Field Engineer (London)
+- [ ] https://jobs.ashbyhq.com/replit/1634b879-80c7-4064-be0a-8a4aecc81923 | Replit | Product Security Engineer (PSIRT - Product Security Incident Response Team)
+
+- [ ] https://jobs.ashbyhq.com/deepgram/378e83b4-28c0-4b4e-8cf0-9355712bd06d | Deepgram | Billing & Analytics Software Engineer
+- [ ] https://jobs.ashbyhq.com/elevenlabs/01d0899b-0e40-4af2-a859-5d21962666b1 | ElevenLabs | Infrastructure Engineer (Data & Automations)
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5193973008 | Anthropic | Applied AI Architect (Startups)
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5196015008 | Anthropic | Enterprise Account Executive, Federal Civilian Sales - State & International
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5194827008 | Anthropic | Field Services Engineer
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5195705008 | Anthropic | Security Engineer - Threat Intel
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5191433008 | Anthropic | Software Engineer, Safeguards Foundations (Internal Tooling)
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5073998008 | Anthropic |  Staff Software Engineer, Continuous Integration
+- [ ] https://job-boards.greenhouse.io/discord/jobs/8245153002 | Discord | Staff Software Engineer, Mobile Architecture
+- [ ] https://jobs.ashbyhq.com/cohere/9bdbb821-6536-4090-8faa-a2b04a70bbf1 | Cohere | Engineering Manager, FDE Infrastructure (EMEA)
+- [ ] https://jobs.ashbyhq.com/cohere/4f9c534b-5e72-4115-8b96-b7a769a2fabd | Cohere | Security Officer - Sovereign AI
+- [ ] https://jobs.ashbyhq.com/cohere/3cb6d334-90f5-4195-9870-0e0c61e58d63 | Cohere | Summer HR Intern – Rippling HRIS Implementation
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7835625 | Twilio | Graphic Design Intern (June 22nd start, 12 weeks)
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7755317 | Twilio | Senior Manager, Platform Engineering - Secure Supply Chain
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7822831 | Twilio | Software Engineer 
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7061880 | Twilio | Staff Machine Learning Engineer
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7821489 | Twilio | Technical Program Manager (P4)
+- [ ] https://job-boards.greenhouse.io/twilio/jobs/7761378 | Twilio | Technical Support Engineer
+- [ ] https://jobs.ashbyhq.com/sierra/d9c0aa93-e35d-4752-9cef-4c39dcad5365 | Sierra | Forward Deployed Infrastructure Engineer
+- [ ] https://job-boards.greenhouse.io/dialpad/jobs/8407062002 | Dialpad | Engineering Manager, AI Transformation
+- [ ] https://job-boards.greenhouse.io/gongio/jobs/4387396006 | Gong | DevOps Engineering Manager
+- [ ] https://job-boards.greenhouse.io/gongio/jobs/4627758006 | Gong | Engineering Team Lead - Dashboards
+- [ ] https://job-boards.greenhouse.io/gongio/jobs/4670235006 | Gong | Senior Product Security Architect
+- [ ] https://job-boards.greenhouse.io/gongio/jobs/4672109006 | Gong | Senior Product Security Engineer
+- [ ] https://jobs.ashbyhq.com/n8n/49e569f0-503e-4e42-a1ba-7e63684e90d3 | n8n | Sr Product Security Engineer | Remote | Europe
+- [ ] https://jobs.ashbyhq.com/n8n/42c09bd6-1571-493d-b5af-f2de77f4f0ba | n8n | Director of Engineering | Remote | Europe
+- [ ] https://jobs.ashbyhq.com/zapier/03aee44c-e6db-479f-94c4-1eda8cc6bf9f | Zapier | Sales Engineer, Enterprise
+- [ ] https://jobs.ashbyhq.com/zapier/16e61b90-b31d-4328-b81c-ba543248640e | Zapier | Director of Engineering, Infrastructure
+- [ ] https://jobs.ashbyhq.com/replit/12635a4d-290e-4b50-a2ae-11b3bbb74fe5 | Replit | Field Engineer (London)
+- [ ] https://jobs.ashbyhq.com/replit/1634b879-80c7-4064-be0a-8a4aecc81923 | Replit | Product Security Engineer (PSIRT - Product Security Incident Response Team)
+- [ ] https://jobs.ashbyhq.com/render/a537929c-d3b2-4289-a6aa-33dca9003c6a | Render | Product Manager, Security, Trust & Governance 
+- [ ] https://jobs.ashbyhq.com/render/421729c2-5f02-481e-a373-d5b28efdf458 | Render | Staff Design Engineer
+- [ ] https://job-boards.greenhouse.io/sourcegraph91/jobs/5973064004 | Sourcegraph | Support Engineer - EMEA [IC2]
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8497728002 | GitLab | Customer Success Engineer - Japan
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8510488002 | GitLab | Director, Enterprise Architecture & Intelligent Automation
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8493970002 | GitLab | G&A Engineer, Netsuite/Claude 
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8481029002 | GitLab | Intermediate Backend Engineer, Database Automation (Ruby)
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8504232002 | GitLab | Intermediate Site Reliability Engineer, Environment Automation
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8514945002 | GitLab | Senior Backend Engineer (AI), Pipeline Execution
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8509723002 | GitLab | Senior Solutions Architect - CEUR
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8508027002 | GitLab | Staff Backend Engineer, Analytics Instrumentation (Golang)
+- [ ] https://www.cockroachlabs.com/careers/job/?gh_jid=7836747 | CockroachDB | Sr. Staff Sales Engineer - London, UK
+- [ ] https://www.cockroachlabs.com/careers/job/?gh_jid=7409253 | CockroachDB | Sr. Staff Sales Engineer - US West
+- [ ] https://stripe.com/jobs/search?gh_jid=7826765 | Stripe | Backend Engineer, AI Security
+- [ ] https://stripe.com/jobs/search?gh_jid=7768979 | Stripe | Product Manager, EMEA Payments Lead
+- [ ] https://stripe.com/jobs/search?gh_jid=7834628 | Stripe | Product Manager, SEA
+- [ ] https://stripe.com/jobs/search?gh_jid=7826761 | Stripe | Software Engineer, Security Analytics Infrastructure
+- [ ] https://stripe.com/jobs/search?gh_jid=7396509 | Stripe | Solutions Architect, Platforms
+- [ ] https://stripe.com/jobs/search?gh_jid=7812856 | Stripe | Staff Product Manager, Enterprise (Industries) 
+- [ ] https://stripe.com/jobs/search?gh_jid=7594376 | Stripe | Technical Account Manager, German OR Polish OR Ukrainian Speaking
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7834688?gh_jid=7834688 | Cloudflare | Content Marketing Intern (July to December 2026)
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7778796?gh_jid=7778796 | Cloudflare | Forward Deployed Engineer
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7821913?gh_jid=7821913 | Cloudflare | Senior Security Engineer - Security Technology Delivery
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7820696?gh_jid=7820696 | Cloudflare | Senior Solutions Architect
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7826822?gh_jid=7826822 | Cloudflare | Senior Solutions Engineer, Enterprise Accounts - San Francisco
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7822857?gh_jid=7822857 | Cloudflare | Senior Strategic Solutions Engineer, Bengaluru
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7505637?gh_jid=7505637 | Cloudflare | Software Engineer, Workers Observability
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7831414?gh_jid=7831414 | Cloudflare | Solutions Engineer, Central & Eastern Europe - Czech Speaking
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7826916?gh_jid=7826916 | Cloudflare | Solutions Engineering Manager
+- [ ] https://boards.greenhouse.io/cloudflare/jobs/7673477?gh_jid=7673477 | Cloudflare | Strategic Partnerships Director, Content & AI Ecosystem
+- [ ] https://careers.duolingo.com/jobs/8512566002?gh_jid=8512566002 | Duolingo | Senior Software Engineer
+- [ ] https://careers.datadoghq.com/detail/7811662/?gh_jid=7811662 | Datadog | Enterprise Sales Engineer
+- [ ] https://careers.datadoghq.com/detail/7391788/?gh_jid=7391788 | Datadog | IT Support Technician Intern
+- [ ] https://careers.datadoghq.com/detail/7721661/?gh_jid=7721661 | Datadog | Open Source Program Developer
+- [ ] https://careers.datadoghq.com/detail/7833865/?gh_jid=7833865 | Datadog | Senior Product Manager - Code Security
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7612557003 | Postman | Head of Engineering (Customer Journey and Monetization)
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7583237003 | Postman | Software Engineer - Frontend, Performance and Monitoring
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7578716003 | Postman | Staff Software Engineer, Business Platform
+- [ ] https://job-boards.greenhouse.io/phonepe/jobs/7710926003 | PhonePe | Intern, People Experience
+- [ ] https://job-boards.greenhouse.io/inmobi/jobs/7793050 | InMobi | Intern - Industrial Trainee
+- [ ] https://job-boards.greenhouse.io/inmobi/jobs/7814028 | InMobi | Senior Product Manager - Sparks
+- [ ] https://jobs.lever.co/cred/cc10a8ae-9066-44fe-bb0c-d784093960cf | CRED | AML operations
+- [ ] https://jobs.ashbyhq.com/ramp/d818443f-d4c5-4eab-892d-3715a935c165 | Ramp | Software Engineer, Banking
+- [ ] https://www.druva.com/why-druva/explore/careers/jobs/8488969002/?gh_jid=8488969002 | Druva | Senior Partner Sales Engineer
+- [ ] https://jobs.lever.co/paytm/da537fb6-3458-4eef-a32d-a1d591d4d190 | Paytm | Engineering Manager - DBA
+- [ ] https://jobs.lever.co/paytm/d028d30f-1746-4dbd-a9f2-bd1ca2b84ded | Paytm | Engineering Manager- Data Devops
+- [ ] https://jobs.lever.co/paytm/96aab63c-bfd8-498e-a3fd-658d0dbf5d4e | Paytm | Engineering Manager- DevOps
+- [ ] https://jobs.lever.co/paytm/6f3c9ff6-e615-4556-b750-c4268cc1ea95 | Paytm | QA - Sr QA Engineer
+- [ ] https://jobs.lever.co/paytm/2b1e9430-2357-45f7-9a70-a163f3e4f6f8 | Paytm | Staff Platform Engineer - AI Infrastructure
+- [ ] https://jobs.lever.co/paytm/a6b6eb53-b823-4e7e-9974-4f93b9228e9c | Paytm | Team Lead / Sr Executive-Mutual Fund Oerations-PML
+
 ## Processed
