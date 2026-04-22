@@ -1,0 +1,50 @@
+Total jobs: 2214
+
+--- Job 1 ---
+  company: CircuitHub
+  role: Open Role at CircuitHub
+  job_url: https://circuithub.com
+  company_website: https://circuithub.com
+  apply_mode: external
+  verified_url: None
+  url_verified: True
+
+--- Job 2 ---
+  company: Rescale
+  role: Open Role at Rescale
+  job_url: https://rescale.com
+  company_website: https://rescale.com
+  apply_mode: external
+  verified_url: None
+  url_verified: True
+
+--- Job 3 ---
+  company: Gusto
+  role: Open Role at Gusto
+  job_url: https://gusto.com
+  company_website: https://gusto.com
+  apply_mode: external
+  verified_url: None
+  url_verified: True
+
+--- Job 4 ---
+  company: Amplitude
+  role: Open Role at Amplitude
+  job_url: https://amplitude.com
+  company_website: https://amplitude.com
+  apply_mode: external
+  verified_url: None
+  url_verified: False
+
+--- Job 5 ---
+  company: Y Combinator
+  role: Open Role at Y Combinator
+  job_url: https://www.ycombinator.com
+  company_website: https://www.ycombinator.com
+  apply_mode: external
+  verified_url: None
+  url_verified: True
+
+Jobs with job_url: 2177/2214
+Jobs with company_website: 2105/2214
+Generic company URLs (not job-specific): 1813/2214
