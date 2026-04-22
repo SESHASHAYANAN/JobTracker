@@ -92,6 +92,30 @@ class Job(BaseModel):
     auto_apply_mode: str = "manual"  # manual | approval | automatic
 
 
+# ── Application Profile ──────────────────────────────────
+
+class ApplicationProfile(BaseModel):
+    full_name: str = ""
+    email: str = ""
+    phone: str = ""
+    linkedin_url: str = ""
+    github_url: str = ""
+    portfolio_url: str = ""
+    resume_text: str = ""
+    resume_file_path: str = ""
+    cover_letter_template: str = ""
+    preferred_titles: list[str] = Field(default_factory=list)
+    preferred_cities: list[str] = Field(default_factory=list)
+    preferred_stages: list[str] = Field(default_factory=list)
+    preferred_tech_stack: list[str] = Field(default_factory=list)
+    remote_preference: str = "any"  # any | remote | onsite | hybrid
+    salary_expectation: str = ""
+    blacklist_companies: list[str] = Field(default_factory=list)
+    blacklist_domains: list[str] = Field(default_factory=list)
+    include_stealth: bool = True
+    auto_apply_mode: str = "manual"  # manual | approval | automatic
+
+
 # ── Application Record ───────────────────────────────────
 
 class ApplicationRecord(BaseModel):
