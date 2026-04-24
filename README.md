@@ -12,7 +12,6 @@ A full-stack platform that aggregates startup job listings from multiple sources
 | **Data** | In-memory store with JSON persistence |
 
 ## Architecture
-
 ```
 backend/
 ├── main.py              # FastAPI entry point
